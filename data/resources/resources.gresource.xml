@@ -8,6 +8,7 @@
     <file compressed="true" preprocess="xml-stripblanks">ui/image-row.ui</file>
     <file compressed="true" preprocess="xml-stripblanks">ui/images-panel.ui</file>
     <file compressed="true" preprocess="xml-stripblanks">ui/images-prune-dialog.ui</file>
+    <file compressed="true" preprocess="xml-stripblanks">ui/info-panel.ui</file>
     <file compressed="true" preprocess="xml-stripblanks">ui/property-row.ui</file>
     <file compressed="true" preprocess="xml-stripblanks">ui/sidebar-row.ui</file>
     <file compressed="true" preprocess="xml-stripblanks">ui/start-service-page.ui</file>

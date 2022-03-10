@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+
+  <template class="InfoPanel" parent="GtkWidget">
+    <property name="layout-manager">
+      <object class="GtkBoxLayout">
+        <property name="orientation">vertical</property>
+      </object>
+    </property>
+
+    <child>
+      <object class="AdwHeaderBar" id="header_bar">
+        <property name="show-start-title-buttons">False</property>
+
+        <child type="start">
+          <object class="GtkButton" id="back_button">
+            <property name="action-name">leaflet.back</property>
+            <property name="icon-name">go-previous-symbolic</property>
+            <binding name="visible">
+              <lookup name="sensitive">back_button</lookup>
+            </binding>
+            >
+          </object>
+        </child>
+
+        <property name="title-widget">
+          <object class="AdwWindowTitle">
+            <property name="title" translatable="yes">Info</property>
+          </object>
+        </property>
+      </object>
+    </child>
+
+    <child>
+      <object class="GtkBox" id="content_box">
+        <property name="orientation">vertical</property>
+        <property name="vexpand">True</property>
+
+        <child>
+          <object class="GtkSpinner" id="spinner">
+            <property name="halign">center</property>
+            <property name="height-request">30</property>
+            <property name="spinning">True</property>
+            <property name="vexpand">True</property>
+            <property name="width-request">30</property>
+          </object>
+        </child>
+
+        <child>
+          <object class="AdwPreferencesPage" id="preferences_page">
+            <property name="valign">start</property>
+            <property name="visible">False</property>
+
+            <child>
+              <object class="AdwPreferencesGroup">
+                <property name="title">General</property>
+
+                <child>
+                  <object class="GtkListBox">
+                    <style>
+                      <class name="boxed-list"/>
+                    </style>
+                    <property name="selection-mode">none</property>
+
+                    <child>
+                      <object class="PropertyRow" id="general_api_version_row">
+                        <property name="key" translatable="yes">API Version</property>
+                      </object>
+                    </child>
+
+                    <child>
+                      <object class="PropertyRow" id="general_built_time_row">
+                        <property name="key" translatable="yes">Built Time</property>
+                      </object>
+                    </child>
+
+                    <child>
+                      <object class="PropertyRow" id="general_git_commit_row">
+                        <property name="key" translatable="yes">Git Commit</property>
+                      </object>
+                    </child>
+
+                    <child>
+                      <object class="PropertyRow" id="general_go_version_row">
+                        <property name="key" translatable="yes">Go Version</property>
+                      </object>
+                    </child>
+
+                    <child>
+                      <object class="PropertyRow" id="general_os_row">
+                        <property name="key" translatable="yes">Operating System</property>
+                      </object>
+                    </child>
+
+                    <child>
+                      <object class="PropertyRow" id="general_arch_row">
+                        <property name="key" translatable="yes">Architecture</property>
+                      </object>
+                    </child>
+
+                    <child>
+                      <object class="PropertyRow" id="general_version_row">
+                        <property name="key" translatable="yes">Version</property>
+                      </object>
+                    </child>
+
+                  </object>
+                </child>
+
+              </object>
+            </child>
+
+            <child>
+              <object class="AdwPreferencesGroup">
+                <property name="title">Operating System</property>
+
+                <child>
+                  <object class="GtkListBox">
+                    <style>
+                      <class name="boxed-list"/>
+                    </style>
+                    <property name="selection-mode">none</property>
+
+                    <child>
+                      <object class="PropertyRow" id="os_name_row">
+                        <property name="key" translatable="yes">Name</property>
+                      </object>
+                    </child>
+
+                  </object>
+                </child>
+
+              </object>
+            </child>
+
+            <!-- <child>
+              <object class="AdwPreferencesGroup">
+                <property name="title">Hardware</property>
+
+                <child>
+                  <object class="GtkListBox">
+                    <style>
+                      <class name="boxed-list"/>
+                    </style>
+                    <property name="selection-mode">none</property>
+
+                    <child>
+                      <object class="PropertyRow" id="id_row">
+                        <property name="key">Id</property>
+                        <property name="value">5</property>
+                      </object>
+                    </child>
+
+                  </object>
+                </child>
+
+              </object>
+            </child> -->
+
+          </object>
+        </child>
+
+      </object>
+    </child>
+
+  </template>
+</interface>
